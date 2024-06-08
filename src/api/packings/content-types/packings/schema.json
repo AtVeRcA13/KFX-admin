@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packing",
+  "info": {
+    "singularName": "packings",
+    "pluralName": "packing",
+    "displayName": "Упаковки"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "packing": {
+      "type": "string"
+    }
+  }
+}

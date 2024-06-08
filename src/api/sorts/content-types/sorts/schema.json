@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sort",
+  "info": {
+    "singularName": "sorts",
+    "pluralName": "sort",
+    "displayName": "Cорта",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sort": {
+      "type": "string"
+    }
+  }
+}

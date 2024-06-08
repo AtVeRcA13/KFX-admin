@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_product_product_infos",
+  "info": {
+    "displayName": "product_info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sort": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sorts.sorts"
+    },
+    "availability": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "packing": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::packings.packings"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "г",
+        "кг",
+        "ц",
+        "т"
+      ]
+    }
+  }
+}

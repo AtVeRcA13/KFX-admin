@@ -834,6 +834,7 @@ export interface ApiProdukcziyaProdukcziya extends Schema.CollectionType {
     product_info: Attribute.Component<'product.product-info'>;
     main_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Attribute.String;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -25,6 +25,11 @@ export interface ProductProductInfo extends Schema.Component {
     weight: Attribute.Enumeration<
       ['\u0433', '\u043A\u0433', '\u0446', '\u0442']
     >;
+    class: Attribute.Relation<
+      'product.product-info',
+      'oneToOne',
+      'api::class.class'
+    >;
   };
 }
 

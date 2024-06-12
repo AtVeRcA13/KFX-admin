@@ -788,6 +788,37 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiClassClass extends Schema.CollectionType {
+  collectionName: 'classes';
+  info: {
+    singularName: 'class';
+    pluralName: 'classes';
+    displayName: '\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u0438';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    class: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::class.class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::class.class',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPackingsPackings extends Schema.CollectionType {
   collectionName: 'packing';
   info: {
@@ -902,6 +933,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::class.class': ApiClassClass;
       'api::packings.packings': ApiPackingsPackings;
       'api::produkcziya.produkcziya': ApiProdukcziyaProdukcziya;
       'api::sorts.sorts': ApiSortsSorts;
